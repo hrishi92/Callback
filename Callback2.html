@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+The global function (myFunction) returns the product of the arguments (a ,b):
+</p>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction(callback)
+{
+  setTimeout(function(){ 
+    var c=10+20;
+    callback(c)
+  }, 5000);
+}
+
+myFunction(function callback(res)
+{
+  document.getElementById("demo").innerHTML =res ;
+}) 
+
+</script>
+
+</body>
+</html>

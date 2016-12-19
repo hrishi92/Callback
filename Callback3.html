@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+function mySandwich(param1, param2, callback) {
+	document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "Started eating my sandwich.\n\nIt has: " + param1 + " , " + param2;
+    setTimeout(callback("Finished eating"), 5000);
+}
+
+mySandwich('ham', 'cheese', function(res) {
+	document.getElementById("demo").innerHTML = res;
+});
+
+console.log("\nTest Line");
+
+</script>
+
+</body>
+
+</html>
